@@ -1,0 +1,19 @@
+{
+  "name": "los-scrollos",
+  "version": "1.0.0",
+  "description": "simple jquery plugins for scrolling overflow content",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azhsetiawan/los-scrollos.git"
+  },
+  "author": "Azh Setiawan <azhsetiawan@users.noreply.github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azhsetiawan/los-scrollos/issues"
+  },
+  "homepage": "https://github.com/azhsetiawan/los-scrollos#readme"
+}

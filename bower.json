@@ -1,0 +1,29 @@
+{
+  "name": "los-scrollos",
+  "homepage": "https://github.com/azhsetiawan/los-scrollos",
+  "authors": [
+    "Azh Setiawan <azhsetiawan@users.noreply.github.com>"
+  ],
+  "description": "simple jquery plugins for scrolling overflow content",
+  "keywords": [
+  	"scroll",
+  	"scrolling",
+  	"overflow",
+  	"jquery"
+  ],
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "backup",
+    "log",
+    "package*.json"
+  ],
+	"dependencies": {
+		"jquery": ">=1.7"
+	}
+}
