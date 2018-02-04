@@ -4,6 +4,11 @@ backup
 log
 test
 
+demo
+dist
+src
+.tmp
+
 *.log
 
 ._*
