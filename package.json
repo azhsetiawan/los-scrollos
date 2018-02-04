@@ -1,7 +1,8 @@
 {
   "name": "los-scrollos",
   "version": "1.0.0",
-  "description": "simple jquery plugins for scrolling overflow content",
+  "description": "Simple jQuery plugins for scrolling overflow content.",
+  "title": "Los Scrollos",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +11,24 @@
     "type": "git",
     "url": "git+https://github.com/azhsetiawan/los-scrollos.git"
   },
-  "author": "Azh Setiawan <azhsetiawan@users.noreply.github.com>",
+  "author": {
+  	"name": "Azh Setiawan",
+  	"email": "azhsetiawan@users.noreply.github.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/azhsetiawan/los-scrollos/issues"
   },
-  "homepage": "https://github.com/azhsetiawan/los-scrollos#readme"
+  "homepage": "https://github.com/azhsetiawan/los-scrollos",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-git": "^2.5.1",
+    "gulp-header": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-strip-debug": "^2.0.0",
+    "gulp-uglify": "^3.0.0"
+  }
 }
