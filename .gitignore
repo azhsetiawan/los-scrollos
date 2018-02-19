@@ -1,10 +1,10 @@
-node_modules
-bower_components
-backup
-log
-test
+/node_modules
+/bower_components
+/backup
+/log
+/test
+/.tmp
 
 *.log
-
 ._*
 .DS_Store
