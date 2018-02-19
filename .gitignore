@@ -1,15 +1,19 @@
-node_modules
-bower_components
-backup
-log
-test
+/node_modules
+/bower_components
+/backup
+/log
+/test
+/demo
+/dist
+/src
+/.tmp
 
-demo
-dist
-src
-.tmp
+gulpfile.js
+*.json
 
+
+.editorconfig
+.eslintrc
 *.log
-
 ._*
 .DS_Store
