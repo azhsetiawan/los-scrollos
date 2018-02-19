@@ -1,0 +1,17 @@
+{
+	"dir": {
+		"tmp": ".tmp",
+		"dist": "dist"
+	},
+	"src": {
+		"scss": "src/scrollos.scss",
+		"js": "src/scrollos.js"
+	},
+	"demo": {
+		"scss": "demo/demo.scss",
+		"pug": "demo/index.pug"
+	},
+	"tmp": {
+		"html": ".tmp/index.html"
+	}
+}
