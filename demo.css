@@ -1,1 +1,180 @@
-#demo {}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+}
+
+a,
+a:visited {
+  color: #333;
+}
+
+#demo {
+  background-color: #fff;
+}
+
+#demo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#demo p {
+  margin: 0;
+}
+
+#demo > header {
+  padding-left: 32px;
+  padding-right: 32px;
+  text-align: center;
+}
+
+#demo > header > .header-inner {
+  border-bottom: 2px solid #f0f2f4;
+  padding-top: 40px;
+  padding-bottom: 32px;
+}
+
+#demo > header .logo {
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  margin-bottom: 16px;
+}
+
+#demo > main {
+  position: relative;
+}
+
+#demo > footer {
+  text-align: center;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+#demo > footer > .footer-inner {
+  border-top: 2px solid #f0f2f4;
+  padding: 32px;
+  overflow: hidden;
+}
+
+#demo > footer .fa-heart {
+  color: #ff2d55;
+}
+
+#demo > footer .text-made-in {
+  float: left;
+}
+
+#demo > footer .link-github {
+  float: right;
+}
+
+#demo > footer .link-github:not(:hover) {
+  text-decoration: none;
+}
+
+#demo .scrollos-nav {
+  text-align: center;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+#demo .scrollos-nav > i.fa {
+  width: 16px;
+}
+
+@media (max-width: 767px) {
+  #demo > main {
+    padding: 48px 0;
+  }
+  #demo > footer .text-made-in,
+  #demo > footer .link-github {
+    float: none;
+  }
+  #demo > footer .link-github {
+    display: inline-block;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  #demo > main {
+    padding: 80px 64px 80px;
+  }
+}
+
+.scrollos-wrapper + .scrollos-wrapper {
+  margin-top: 32px;
+}
+
+#example1 {
+  height: 88px;
+}
+
+#example1 .item {
+  background-color: #e1e3e6;
+  height: 88px;
+  width: 168px;
+  padding: 4px;
+}
+
+#example1 .item + .item {
+  margin-left: 8px;
+}
+
+#example2 {
+  background-color: #e1e3e6;
+  height: 112px;
+}
+
+#example2 .scrollos-content {
+  padding: 8px;
+}
+
+#example2 .item {
+  height: 96px;
+  width: 96px;
+}
+
+#example2 .item + .item {
+  margin-left: 8px;
+}
+
+#example3 {
+  background-color: #e1e3e6;
+  height: 40px;
+}
+
+#example3 .scrollos-nav {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+#example3 .item {
+  height: 40px;
+  width: 80px;
+  text-align: center;
+}
+
+#example3 .item > span {
+  font-size: 16px;
+  font-weight: bolder;
+  display: block;
+  line-height: 40px;
+}
