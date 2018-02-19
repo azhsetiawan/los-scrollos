@@ -13,18 +13,22 @@
 	// as this (slightly) quickens the resolution process and can be more efficiently
 	// minified (especially when both are regularly referenced in your plugin).
 
+	// Hack to make it pass eslint
+	if ( typeof undefined !== "undefined" ) {
+		undefined = void 0;
+	}
+
 	// Create the defaults once
 	var pluginName = "Scrollos",
 			pluginNamespace = ".scrollos",
 			defaults = {
 				scrollTravelling: false,
 				scrollDirection: "",
-				scrollDistance: 212,
-				wrapperHeight: "auto"
+				scrollDistance: 100
 			};
 
 	// The actual plugin constructor
-	function Plugin ( element, options ) {
+	function Plugin( element, options ) {
 		this.element    = element;
 		this.$element   = $( element );
 		this.container  = this.$element.find( ".scrollos-container" )[ 0 ];
@@ -45,10 +49,6 @@
 	// Avoid Plugin.prototype conflicts
 	$.extend( Plugin.prototype, {
 		init: function() {
-			// if ( this.settings.wrapperHeight === "auto" ) {
-			// 	var wrapHeight = this.$content.children().first().outerHeight();
-			// 	this.$element.css( "height", wrapHeight );
-			// }
 
 			// Place initialization logic here
 			// You already have access to the DOM element and the options via the instance,
@@ -85,9 +85,8 @@
 			}
 		},
 
+		// More: https://caniuse.com/#search=setAttribute
 		updateOverflow: function() {
-
-			// More: https://caniuse.com/#search=setAttribute
 			this.container.setAttribute(
 				"data-overflowing",
 				this.determineOverflow( this.container, this.content )
@@ -98,7 +97,9 @@
 			var _distance = this._defaults.scrollDistance;
 
 			// If in the middle of a move return
-			if ( this._defaults.scrollTravelling === true ) { return; }
+			if ( this._defaults.scrollTravelling === true ) {
+				return;
+			}
 
 			// If we have content overflowing both sides or on the one side
 			if ( this.determineOverflow( container, content ) !== "none" ) {
@@ -191,7 +192,7 @@
 				// (so get the scroll pos first) and then remove the transform
 				var styleOfTransform = window.getComputedStyle( _this.content, null );
 				var tr = styleOfTransform.getPropertyValue( "-webkit-transform" ) ||
-								 styleOfTransform.getPropertyValue( "transform" );
+								styleOfTransform.getPropertyValue( "transform" );
 
 				// If there is no transition we want to default to 0 and not null
 				var amount = Math.abs( parseInt( tr.split( "," )[ 4 ] ) || 0 );
