@@ -1,0 +1,84 @@
+- var name = "Los Scrollos"
+
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		title #{name} - Demo
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+		// build:css scrollos.css
+		link(rel="stylesheet", href="/scrollos.css")
+		// endbuild
+		// build:css(.tmp) demo.css
+		link(rel="stylesheet", href="/demo.css")
+		// endbuild
+		include _analytics.pug
+	body#demo
+
+		header
+			.header-inner
+				.logo
+					img(src="https://raw.githubusercontent.com/azhsetiawan/assets/master/los-scrollos.png", alt=name)
+				p Simple jQuery plugins for scrolling overflow content
+
+		main
+			#example1.scrollos-wrapper
+				.scrollos-container(data-overflowing="none")
+					.scrollos-content
+						- var a = 1;
+						while a <= 12
+							.item
+								img(src="http://via.placeholder.com/160x80?text="+a, alt="item")
+								- a++
+				.scrollos-nav.scrollos-prev
+					i.fa.fa-chevron-left
+				.scrollos-nav.scrollos-next
+					i.fa.fa-chevron-right
+
+			#example2.scrollos-wrapper
+				.scrollos-container(data-overflowing="none")
+					.scrollos-content
+						- var a = 1;
+						while a <= 20
+							.item
+								img(src="http://via.placeholder.com/96?text="+a, alt="item")
+								- a++
+				.scrollos-nav.scrollos-prev
+					i.fa.fa-chevron-left
+				.scrollos-nav.scrollos-next
+					i.fa.fa-chevron-right
+
+			#example3.scrollos-wrapper
+				.scrollos-container(data-overflowing="none")
+					.scrollos-content
+						- var a = 1;
+						while a <= 24
+							.item
+								span= "Item "+a
+								- a++
+				.scrollos-nav.scrollos-prev
+					i.fa.fa-chevron-left
+				.scrollos-nav.scrollos-next
+					i.fa.fa-chevron-right
+
+		footer
+			.footer-inner
+				a.link-github(href="https://github.com/azhsetiawan/los-scrollos") GitHub
+				p.text-made-in Made with #[i.fa.fa-heart] in Indonesia
+
+		// build:js(./) jquery.min.js
+		script(src="bower_components/jquery/dist/jquery.min.js")
+		// endbuild
+		// build:js scrollos.js
+		script(src="/scrollos.js")
+		// endbuild
+		script.
+			$( function () {
+				console.log('demo');
+				$('#example1').Scrollos();
+				$('#example2').Scrollos();
+				$('#example3').Scrollos();
+			});
+

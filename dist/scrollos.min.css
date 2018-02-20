@@ -1,0 +1,9 @@
+/*
+ *  Los Scrollos - v1.0.0
+ *  Simple jQuery plugins for scrolling overflow content.
+ *  https://github.com/azhsetiawan/los-scrollos
+ *
+ *  Azh Setiawan
+ *  Under MIT License
+ */
+.scrollos-wrapper{position:relative;overflow:hidden}.scrollos-container{position:relative;height:130%;width:100%;overflow-x:auto;overflow-y:hidden;white-space:nowrap;-ms-overflow-style:-ms-autohiding-scrollbar;-webkit-overflow-scrolling:touch}.scrollos-content{white-space:nowrap;position:relative;float:left;transition:transform .2s ease-in-out}.scrollos-content:not(.item){font-size:0}.scrollos-content.-no-transition{transition:none}.scrollos-content>.item{display:inline-block}.scrollos-nav{position:absolute;top:50%;transform:translateY(-50%);border:none;opacity:0;visibility:hidden}.scrollos-nav:focus{outline:none}.scrollos-prev{left:0}.scrollos-next{right:0}div[data-overflowing='both'] ~ .scrollos-nav.scrollos-prev,div[data-overflowing='both'] ~ .scrollos-nav.scrollos-next,div[data-overflowing='left'] ~ .scrollos-nav.scrollos-prev,div[data-overflowing='right'] ~ .scrollos-nav.scrollos-next{opacity:1;visibility:visible}
